@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewValley.TerrainFeatures;
@@ -74,7 +72,7 @@ namespace TreeTransplant
 				}
 
 				// tree index refers to column in the generated texture, mahogany is hard coded as 4
-				var treeIndex = (parse(tree.treeType.Value) == parse(Tree.mahoganyTree) ? 4 : parse(tree.treeType.Value));
+				var treeIndex = (Parse(tree.treeType.Value) == Parse(Tree.mahoganyTree) ? 4 : Parse(tree.treeType.Value));
 				var basicTree = treeIndex >= 1 && treeIndex <= 4;
 				// non-basic trees are palm and mushroom which are 6 and 7 so we subtract 6 to get 0 and 1
 				var xOffset = treeIndex - (basicTree ? 1 : 6);
@@ -84,9 +82,17 @@ namespace TreeTransplant
 			}
 		}
 
-		int parse(string va)
+		static int Parse(string va)
 		{
-			return int.Parse(va);
+			// if the parse value is not a number, the tree comes from an other mod, forced to 0
+			if (int.TryParse(va, out var result))
+			{
+				return result;
+			}
+			else
+			{
+				return 0;
+			}
 		}
 
 		public Rectangle stumpSourceRect => Tree.stumpSourceRect;

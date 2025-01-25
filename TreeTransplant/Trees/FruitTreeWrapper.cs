@@ -49,8 +49,8 @@ namespace TreeTransplant
 				int season = Utility.getSeasonNumber(Game1.currentSeason);
 
 				return new Rectangle(
-					tree.growthStage.Value * 48 + (adult ? season * 48 : 4), // offset the small trees because idk
-					int.Parse(tree.treeId.Value) * 80,
+					tree.growthStage.Value * 48 + (adult ? season * 48 : 4),
+					0,
 					48,
 					80
 				);
@@ -59,7 +59,7 @@ namespace TreeTransplant
 
 		public Rectangle stumpSourceRect
 		{
-			get { return new Rectangle(384, (int.Parse(tree.treeId.Value)  * 80) + 56, 48, 24); }
+			get { return new Rectangle(384, 56, 48, 24); }
 		}
 
 

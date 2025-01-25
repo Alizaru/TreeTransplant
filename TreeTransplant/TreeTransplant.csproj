@@ -10,9 +10,10 @@
         <Platforms>AnyCPU</Platforms>
         <TranslationClassBuilder_AddGetByKey>true</TranslationClassBuilder_AddGetByKey>
         <PackageLicenseExpression>GPL-3.0</PackageLicenseExpression>
+        <GamePath>D:\SteamLibrary\steamapps\common\Stardew Valley</GamePath>
     </PropertyGroup>
     <ItemGroup>
-      <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+      <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.3.2" />
     </ItemGroup>
 
     <ItemGroup>
