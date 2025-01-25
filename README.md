@@ -7,6 +7,7 @@ on your farm without needing to chop them down and wait for them to regrow.
 
 - 1.6 compatibility
 - Update to Smapi 4.0.0
+- Fix crash when transplant modded trees
 
 
 [Original Repository](https://github.com/LeonBlade/TreeTransplant)
@@ -45,9 +46,13 @@ By right-clicking with a tree selected or using the flip button in the bottom ri
 Using the close button the bottom right or hitting your exit key on your keyboard (default escape) 
 you can close out of this menu and return back in front of Robin.
 
-## Versions
+## Knonw issues
 
-See [releases page](https://github.com/siweipancc/TreeTransplant/releases).
+There is only some graphics issues that I planned to take care later if I found the problem.
+I am totally open if someone have an idea and do a pull request.
+
+- The sprite of modded tree can be wrong on ghost mode
+- The stump can be invisible on ghost mode
 
 ## License
 
@@ -55,4 +60,4 @@ GPL-3.0
 
 ## See also
 
-* [Nexus mods](http://www.nexusmods.com/stardewvalley/mods/20852/)
+* [Nexus mods]()
